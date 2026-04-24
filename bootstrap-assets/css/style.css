@@ -1,0 +1,180 @@
+:root,
+[data-bs-theme="light"] {
+  --bs-body-font-family: 'Outfit', sans-serif;
+  --bs-body-bg: #f8f9fc;
+  --bs-body-color: #0f172a;
+  
+  --color-accent: #e63946; 
+  --color-accent-rgb: 230, 57, 70;
+  
+  --bg-card: #ffffff;
+  --bg-card-alt: #f1f5f9;
+  --border-color: #cbd5e1;
+  --badge-bg: #e2e8f0;
+  --badge-text: #334155;
+  --nav-bg: rgba(248, 249, 252, 0.9);
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0a0a0b; 
+  --bs-body-color: #f8fafc;
+  
+  --bg-card: #141415;
+  --bg-card-alt: #1a1a1c;
+  --border-color: #27272a;
+  --badge-bg: #27272a;
+  --badge-text: #e2e8f0;
+  --nav-bg: rgba(10, 10, 11, 0.9);
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.tracking-wide { letter-spacing: 0.1em; }
+
+.text-accent { color: var(--color-accent) !important; }
+.bg-accent { background-color: var(--color-accent) !important; }
+.custom-bg-alt { background-color: var(--bg-card-alt); }
+.custom-border { border-color: var(--border-color) !important; }
+.bg-custom-light { background-color: rgba(var(--color-accent-rgb), 0.1); }
+
+.max-w-custom { max-width: 1000px; }
+
+.custom-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.custom-card-alt {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.custom-badge {
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--border-color);
+}
+
+.backdrop-blur { backdrop-filter: blur(12px); }
+.custom-nav {
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.custom-nav-link {
+  color: var(--bs-body-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem !important;
+  transition: all 0.2s;
+}
+
+.custom-nav-link:hover {
+  background-color: var(--badge-bg);
+  color: var(--color-accent);
+}
+
+.btn-theme-toggle {
+  background-color: var(--badge-bg);
+  color: var(--bs-body-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+.btn-theme-toggle:hover {
+  background-color: var(--bg-card-alt);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-accent:hover {
+  background-color: #d90429;
+  border-color: #d90429;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(230, 57, 70, 0.3);
+}
+
+.btn-outline-custom {
+  color: var(--bs-body-color);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+}
+.btn-outline-custom:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: transparent;
+}
+
+.avatar-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--color-accent);
+  padding: 4px;
+  background-color: var(--bg-card);
+}
+.avatar-ring img {
+  border-radius: 50%;
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.icon-box-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.proj-card {
+  --card-hover-border: var(--color-accent);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s;
+}
+.proj-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--card-hover-border);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.custom-progress {
+  background-color: var(--badge-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.custom-progress-bar {
+  background-color: var(--color-accent);
+  border-radius: 10px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Felipe – Portfólio (Bootstrap)</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="bootstrap-assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top custom-nav backdrop-blur">
+    <div class="container max-w-custom">
+      <a class="navbar-brand font-display fw-bold" href="#hero">
+        <span class="text-accent">&lt;/&gt;</span> Meu Portfólio
+      </a>
+      
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-1 text-body"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1 mt-3 mt-lg-0">
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="#interesses">Interesses</a></li>
+          <li class="nav-item"><a class="nav-link custom-nav-link" href="#contato">Contato</a></li>
+          
+          <li class="nav-item ms-lg-2 my-2 my-lg-0">
+            <button id="themeBtn" class="btn btn-theme-toggle w-100 text-start text-lg-center">Alternar Tema</button>
+          </li>
+          
+          <li class="nav-item ms-lg-3">
+            <a href="index.html" class="btn btn-accent text-white fw-bold w-100 rounded-3">
+              Versão Tailwind <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="py-5 pt-lg-5 pb-lg-5 overflow-hidden position-relative">
+    <div class="container max-w-custom position-relative z-1">
+      <div class="row align-items-center gy-5">
+        
+        <div class="col-lg-6 fade-in">
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <div class="avatar-ring overflow-hidden flex-shrink-0">
+              <img src="img/avatar.jpg" alt="Foto de Matheus Felipe" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div>
+              <p class="text-accent fw-bold text-uppercase tracking-wide small mb-2">UX UI Designer</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-accent text-white px-3 py-2 rounded-2 fw-semibold">
+                  <i class="bi bi-mortarboard-fill me-1"></i> Sistemas de Informação
+                </span>
+                <span class="badge custom-badge px-3 py-2 rounded-2 fw-semibold">UFLA</span>
+              </div>
+            </div>
+          </div>
+          
+          <h1 class="font-display display-4 fw-bolder lh-1 mb-3">Matheus Felipe<br>Godoi Coutinho</h1>
+          <p class="text-muted fs-5 mb-4">
+            Assistente de UX UI Designer · <span class="fw-semibold" style="color: #ff6b35;">YouX Group</span>
+          </p>
+          
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#projetos" class="btn btn-accent text-white fw-bold px-4 py-2 rounded-3">Ver Projetos</a>
+            <a href="#contato" class="btn btn-outline-custom fw-bold px-4 py-2 rounded-3">Entrar em Contato</a>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 fade-in" style="transition-delay: 0.15s;">
+          <div class="d-flex flex-col gap-3">
+            <div class="custom-card p-4 rounded-4">
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-mortarboard-fill text-accent fs-4 lh-1"></i>
+                <div>
+                  <p class="text-muted text-uppercase tracking-wide fw-bold small mb-1">Formação</p>
+                  <p class="mb-0 text-body">Bacharelado em Sistemas de Informação — Universidade Federal de Lavras (UFLA)</p>
+                </div>
+              </div>
+            </div>
+            <div class="custom-card p-4 rounded-4 mt-3">
+              <div class="d-flex gap-3 align-items-start">
+                <i class="bi bi-briefcase-fill text-accent fs-4 lh-1"></i>
+                <div>
+                  <p class="text-muted text-uppercase tracking-wide fw-bold small mb-1">Objetivo</p>
+                  <p class="mb-0 text-body">Aprofundar conhecimentos em UX/UI, acessibilidade e front-end, conectando design centrado no usuário com código de qualidade.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="py-5 custom-bg-alt">
+    <div class="container max-w-custom">
+      <div class="row gy-5 gx-lg-5">
+        
+        <div class="col-lg-6 fade-in">
+          <span class="text-accent fw-bold text-uppercase tracking-wide small mb-1 d-block">Quem sou eu</span>
+          <h2 class="font-display fw-bolder mb-2">Sobre</h2>
+          <p class="text-muted mb-4">Uma breve descrição da minha trajetória.</p>
+          
+          <div class="custom-card-alt p-4 rounded-4">
+            <p class="mb-3">Sou estudante de Sistemas de Informação na UFLA e atuo como Assistente de UX UI Design na empresa YouX Group. Tenho paixão por criar experiências digitais que sejam ao mesmo tempo belas, funcionais e acessíveis.</p>
+            <p class="mb-0">Meu foco está na interseção entre design e desenvolvimento: entender o usuário, prototipar soluções no Figma e transformá-las em interfaces web responsivas. Acredito que boa experiência começa com empatia e termina com código limpo.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 fade-in" style="transition-delay: 0.1s;">
+          <span class="text-accent fw-bold text-uppercase tracking-wide small mb-1 d-block">Detalhes</span>
+          <h2 class="font-display fw-bolder mb-2">Informações</h2>
+          <p class="text-muted mb-4">Dados rápidos sobre mim.</p>
+          
+          <div class="custom-card p-4 rounded-4">
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+              <li class="d-flex align-items-center gap-3 border-bottom custom-border pb-3">
+                <i class="bi bi-geo-alt-fill text-accent fs-5"></i>
+                <span class="text-muted" style="width: 80px;">Cidade:</span>
+                <span class="fw-semibold text-body">Lavras, MG</span>
+              </li>
+              <li class="d-flex align-items-center gap-3 border-bottom custom-border pb-3">
+                <i class="bi bi-translate text-accent fs-5"></i>
+                <span class="text-muted" style="width: 80px;">Idiomas:</span>
+                <span class="fw-semibold text-body">Português, Inglês (intermediário)</span>
+              </li>
+              <li class="d-flex align-items-center gap-3 border-bottom custom-border pb-3">
+                <i class="bi bi-laptop text-accent fs-5"></i>
+                <span class="text-muted" style="width: 80px;">Área:</span>
+                <span class="fw-semibold text-body">UX UI Design</span>
+              </li>
+              <li class="d-flex align-items-center gap-3 border-bottom custom-border pb-3">
+                <i class="bi bi-building text-accent fs-5"></i>
+                <span class="text-muted" style="width: 80px;">Empresa:</span>
+                <span class="fw-semibold text-body">YouX Group</span>
+              </li>
+              <li class="d-flex align-items-center gap-3">
+                <i class="bi bi-book-half text-accent fs-5"></i>
+                <span class="text-muted" style="width: 80px;">Curso:</span>
+                <span class="fw-semibold text-body">Sistemas de Informação – UFLA</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="py-5">
+    <div class="container max-w-custom">
+      <div class="text-center mb-5 fade-in">
+        <span class="text-accent fw-bold text-uppercase tracking-wide small d-block mb-1">O que domino</span>
+        <h2 class="font-display fw-bolder mb-0">Habilidades</h2>
+        <p class="text-muted mt-2">Tecnologias, ferramentas e competências.</p>
+      </div>
+      
+      <div class="row gy-4">
+        <div class="col-lg-6 fade-in">
+          <div class="custom-card p-4 rounded-4 h-100">
+            <h5 class="font-display fw-bold mb-4">Design & Ferramentas</h5>
+            <div class="d-flex flex-wrap gap-2 mb-4 pb-4 border-bottom custom-border">
+              <span class="badge custom-badge rounded-pill px-3 py-2">Figma</span>
+              <span class="badge custom-badge rounded-pill px-3 py-2">HTML</span>
+              <span class="badge custom-badge rounded-pill px-3 py-2">CSS</span>
+              <span class="badge custom-badge rounded-pill px-3 py-2">JavaScript</span>
+              <span class="badge custom-badge rounded-pill px-3 py-2">Bootstrap</span>
+              <span class="badge custom-badge rounded-pill px-3 py-2">Prototipagem</span>
+            </div>
+            <h6 class="text-muted text-uppercase tracking-wide fw-bold small mb-3">Competências</h6>
+            <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
+              <li>Design de interfaces responsivas e acessíveis</li>
+              <li>Pesquisa e testes com usuários (UX Research)</li>
+              <li>Criação de componentes e design systems</li>
+              <li>Prototipagem de alta fidelidade</li>
+              <li>Boas práticas de legibilidade e hierarquia visual</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 fade-in" style="transition-delay: 0.1s;">
+          <div class="custom-card p-4 rounded-4 h-100">
+            <h5 class="font-display fw-bold mb-4">Nível de familiaridade</h5>
+            <div class="d-flex flex-column gap-4">
+              
+              <div>
+                <div class="d-flex justify-content-between small mb-2">
+                  <span class="fw-bold text-body">Figma</span>
+                  <span class="text-muted">Avançado</span>
+                </div>
+                <div class="progress custom-progress" style="height: 8px;">
+                  <div class="progress-bar custom-progress-bar" role="progressbar" data-width="99%" style="width: 0%;"></div>
+                </div>
+              </div>
+              
+              <div>
+                <div class="d-flex justify-content-between small mb-2">
+                  <span class="fw-bold text-body">HTML/CSS</span>
+                  <span class="text-muted">Básico-Intermediário</span>
+                </div>
+                <div class="progress custom-progress" style="height: 8px;">
+                  <div class="progress-bar custom-progress-bar" role="progressbar" data-width="68%" style="width: 0%;"></div>
+                </div>
+              </div>
+              
+              <div>
+                <div class="d-flex justify-content-between small mb-2">
+                  <span class="fw-bold text-body">JavaScript</span>
+                  <span class="text-muted">Básico-Intermediário</span>
+                </div>
+                <div class="progress custom-progress" style="height: 8px;">
+                  <div class="progress-bar custom-progress-bar" role="progressbar" data-width="68%" style="width: 0%;"></div>
+                </div>
+              </div>
+              
+              <div>
+                <div class="d-flex justify-content-between small mb-2">
+                  <span class="fw-bold text-body">UX Research</span>
+                  <span class="text-muted">Intermediário</span>
+                </div>
+                <div class="progress custom-progress" style="height: 8px;">
+                  <div class="progress-bar custom-progress-bar" role="progressbar" data-width="88%" style="width: 0%;"></div>
+                </div>
+              </div>
+              
+              <div>
+                <div class="d-flex justify-content-between small mb-2">
+                  <span class="fw-bold text-body">Acessibilidade Web</span>
+                  <span class="text-muted">Intermediário</span>
+                </div>
+                <div class="progress custom-progress" style="height: 8px;">
+                  <div class="progress-bar custom-progress-bar" role="progressbar" data-width="88%" style="width: 0%;"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="py-5 custom-bg-alt">
+    <div class="container max-w-custom">
+      <div class="text-center mb-5 fade-in">
+        <span class="text-accent fw-bold text-uppercase tracking-wide small d-block mb-1">O que desenvolvi</span>
+        <h2 class="font-display fw-bolder mb-0">Projetos</h2>
+        <p class="text-muted mt-2">Trabalhos práticos e experiências de aprendizado.</p>
+      </div>
+      
+      <div class="row gy-4">
+        
+        <div class="col-md-6 col-lg-4 fade-in">
+          <div class="custom-card-alt p-4 rounded-4 h-100 proj-card">
+            <div class="icon-box bg-accent text-white mb-4"><i class="bi bi-phone"></i></div>
+            <h5 class="font-display fw-bold mb-2">Jogo de Quiz sobre JavaScript</h5>
+            <p class="text-muted small mb-4">Jogo Web simples que funciona como um quiz onde o usuário deve responder perguntas sobre JavaScript.</p>
+            <div class="d-flex flex-wrap gap-2 mt-auto">
+              <span class="badge custom-badge">JavaScript</span>
+              <span class="badge custom-badge">HTML</span>
+              <span class="badge custom-badge">CSS</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 fade-in" style="transition-delay: 0.1s;">
+          <div class="custom-card-alt p-4 rounded-4 h-100 proj-card" style="--card-hover-border: #ff6b35;">
+            <div class="icon-box text-white mb-4" style="background:#ff6b35;"><i class="bi bi-globe2"></i></div>
+            <h5 class="font-display fw-bold mb-2">Página Pessoal (esta!)</h5>
+            <p class="text-muted small mb-4">Portfólio pessoal com HTML, CSS e JavaScript usando Bootstrap e Tailwind, com tema claro/escuro e layout responsivo.</p>
+            <div class="d-flex flex-wrap gap-2 mt-auto">
+              <span class="badge custom-badge">HTML</span>
+              <span class="badge custom-badge">Bootstrap</span>
+              <span class="badge custom-badge">Tailwind</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 fade-in" style="transition-delay: 0.2s;">
+          <div class="custom-card-alt p-4 rounded-4 h-100 proj-card" style="--card-hover-border: #198754;">
+            <div class="icon-box text-white mb-4" style="background:#198754;"><i class="bi bi-diagram-3-fill"></i></div>
+            <h5 class="font-display fw-bold mb-2">Design System Básico para projeto do TCC</h5>
+            <p class="text-muted small mb-4">Biblioteca de componentes reutilizáveis no Figma: tipografia, cores, botões, cards e formulários com variantes e auto-layout.</p>
+            <div class="d-flex flex-wrap gap-2 mt-auto">
+              <span class="badge custom-badge">Figma</span>
+              <span class="badge custom-badge">Design System</span>
+              <span class="badge custom-badge">UX Research</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="interesses" class="py-5">
+    <div class="container max-w-custom">
+      <div class="text-center mb-5 fade-in">
+        <span class="text-accent fw-bold text-uppercase tracking-wide small d-block mb-1">O que me move</span>
+        <h2 class="font-display fw-bolder mb-0">Interesses</h2>
+        <p class="text-muted mt-2">Áreas que me apaixonam e quero aprofundar.</p>
+      </div>
+      
+      <div class="row gy-3">
+        <div class="col-md-6 fade-in">
+          <div class="custom-card p-3 p-md-4 rounded-4 d-flex gap-3 align-items-start proj-card">
+            <div class="icon-box-sm bg-custom-light text-accent flex-shrink-0"><i class="bi bi-pen-fill"></i></div>
+            <div>
+              <h6 class="font-display fw-bold mb-1">UX UI Design</h6>
+              <p class="text-muted small mb-0">Criar interfaces centradas no usuário que sejam intuitivas, eficientes e esteticamente agradáveis.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 fade-in" style="transition-delay: 0.1s;">
+          <div class="custom-card p-3 p-md-4 rounded-4 d-flex gap-3 align-items-start proj-card">
+            <div class="icon-box-sm bg-custom-light text-accent flex-shrink-0"><i class="bi bi-vector-pen"></i></div>
+            <div>
+              <h6 class="font-display fw-bold mb-1">Figma</h6>
+              <p class="text-muted small mb-0">Dominar componentes, variáveis e prototipagem avançada para criar design systems escaláveis.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 fade-in" style="transition-delay: 0.15s;">
+          <div class="custom-card p-3 p-md-4 rounded-4 d-flex gap-3 align-items-start proj-card">
+            <div class="icon-box-sm bg-custom-light text-accent flex-shrink-0"><i class="bi bi-code-slash"></i></div>
+            <div>
+              <h6 class="font-display fw-bold mb-1">Front-end Development</h6>
+              <p class="text-muted small mb-0">Transformar designs em código limpo e responsivo, aproximando design e engenharia.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 fade-in" style="transition-delay: 0.2s;">
+          <div class="custom-card p-3 p-md-4 rounded-4 d-flex gap-3 align-items-start proj-card">
+            <div class="icon-box-sm bg-custom-light text-accent flex-shrink-0"><i class="bi bi-universal-access"></i></div>
+            <div>
+              <h6 class="font-display fw-bold mb-1">Acessibilidade Digital</h6>
+              <p class="text-muted small mb-0">Garantir que produtos digitais sejam usáveis por todas as pessoas, seguindo as diretrizes WCAG.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 fade-in" style="transition-delay: 0.25s;">
+          <div class="custom-card p-3 p-md-4 rounded-4 d-flex gap-3 align-items-start proj-card">
+            <div class="icon-box-sm bg-custom-light text-accent flex-shrink-0"><i class="bi bi-people-fill"></i></div>
+            <div>
+              <h6 class="font-display fw-bold mb-1">Testes com Usuários</h6>
+              <p class="text-muted small mb-0">Validar hipóteses de design através de testes de usabilidade e pesquisas qualitativas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="py-5 custom-bg-alt">
+    <div class="container max-w-custom">
+      <div class="text-center mb-5 fade-in">
+        <span class="text-accent fw-bold text-uppercase tracking-wide small d-block mb-1">Vamos conversar</span>
+        <h2 class="font-display fw-bolder mb-0">Contato</h2>
+        <p class="text-muted mt-2">Estou aberto a oportunidades e colaborações.</p>
+      </div>
+      
+      <div class="row justify-content-center gy-3">
+        <div class="col-md-4 fade-in">
+          <a href="https://www.linkedin.com/in/matheus-felipe-godoi-coutinho" target="_blank" class="text-decoration-none custom-card-alt p-3 rounded-4 d-flex align-items-center gap-3 proj-card d-block">
+            <div class="icon-box-sm text-white flex-shrink-0" style="background:#0a66c2;"><i class="bi bi-linkedin"></i></div>
+            <div>
+              <p class="font-display fw-bold text-body mb-0 lh-1">LinkedIn</p>
+              <p class="text-muted small mb-0 mt-1">Matheus Felipe</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-md-4 fade-in" style="transition-delay: 0.1s;">
+          <a href="https://github.com/matheusfgcz" target="_blank" class="text-decoration-none custom-card-alt p-3 rounded-4 d-flex align-items-center gap-3 proj-card d-block">
+            <div class="icon-box-sm text-white flex-shrink-0 bg-dark"><i class="bi bi-github"></i></div>
+            <div>
+              <p class="font-display fw-bold text-body mb-0 lh-1">GitHub</p>
+              <p class="text-muted small mb-0 mt-1">Repositório</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-md-4 fade-in" style="transition-delay: 0.2s;">
+          <a href="mailto:matheus.coutinho@estudante.ufla.com" class="text-decoration-none custom-card-alt p-3 rounded-4 d-flex align-items-center gap-3 proj-card d-block">
+            <div class="icon-box-sm bg-accent text-white flex-shrink-0"><i class="bi bi-envelope-fill"></i></div>
+            <div>
+              <p class="font-display fw-bold text-body mb-0 lh-1">E-mail</p>
+              <p class="text-muted small mb-0 mt-1">Envie uma mensagem</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 border-top custom-border text-center custom-bg-alt">
+    <div class="container">
+      <p class="text-muted small mb-1">
+        Desenvolvido por <strong class="text-accent">Matheus Felipe Godoi Coutinho</strong> · GAC116 – Programação Web – UFLA 2026/1
+      </p>
+      <p class="text-muted small d-inline-flex align-items-center gap-2 mb-0">
+        Versão <span class="badge bg-primary px-2 rounded-2">Bootstrap</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap-assets/js/main.js"></script>
+</body>
+</html>

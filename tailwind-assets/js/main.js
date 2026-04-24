@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   const themeBtn = document.getElementById('themeBtn');
   const themeBtnMobile = document.getElementById('themeBtnMobile');
   const html = document.documentElement;
@@ -11,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const updateBtnLabels = (isDark) => {
-    if (themeBtn) themeBtn.textContent = isDark ? '☀️' : '🌙';
-    if (themeBtnMobile) themeBtnMobile.textContent = isDark ? '☀️ Alternar tema' : '🌙 Alternar tema';
+    if (themeBtn) themeBtn.textContent = isDark ? 'Tema Claro' : 'Tema Escuro';
+    if (themeBtnMobile) themeBtnMobile.textContent = isDark ? 'Tema Claro' : 'Tema Escuro';
   };
 
   updateBtnLabels(saved === 'dark');
@@ -55,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
   const skillSection = document.getElementById('habilidades');
-
   if (skillSection) {
     const skillObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -67,8 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, { threshold: 0.3 });
-
     skillObserver.observe(skillSection);
   }
-
 });

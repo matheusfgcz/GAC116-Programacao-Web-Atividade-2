@@ -2,18 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const themeBtn = document.getElementById('themeBtn');
   const html = document.documentElement;
-  const saved = localStorage.getItem('theme') || 'light';
 
-  html.setAttribute('data-theme', saved);
-  themeBtn.textContent = saved === 'dark' ? '☀️' : '🌙';
+  const savedTheme = localStorage.getItem('bs-theme') || 'light';
 
-  themeBtn.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    themeBtn.textContent = next === 'dark' ? '☀️' : '🌙';
-    localStorage.setItem('theme', next);
-  });
+  const updateThemeUI = (isDark) => {
+    html.setAttribute('data-bs-theme', isDark ? 'dark' : 'light');
+    if (themeBtn) themeBtn.textContent = isDark ? 'Tema Claro' : 'Tema Escuro';
+  };
+
+  updateThemeUI(savedTheme === 'dark');
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-bs-theme');
+      const isDark = currentTheme === 'light';
+
+      updateThemeUI(isDark);
+      localStorage.setItem('bs-theme', isDark ? 'dark' : 'light');
+    });
+  }
 
   const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -22,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
 
   document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
@@ -32,8 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.skill-fill').forEach(bar => {
-            bar.style.width = bar.dataset.width + '%';
+          entry.target.querySelectorAll('.custom-progress-bar').forEach(bar => {
+            const width = bar.getAttribute('data-width');
+            bar.style.width = width;
           });
           skillObserver.unobserve(entry.target);
         }
